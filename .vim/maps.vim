@@ -34,3 +34,8 @@ nmap <silent> gr <Plug>(coc-references)
 
 " diagnostics
 nnoremap <Leader>dia  :<C-u>CocList diagnostics<cr>
+nnoremap <leader>kp :let @*=expand("%")<CR>
+
+" tabs navigation
+map <Leader>h :tabprevious<cr>
+map <Leader>l :tabnext<cr>
