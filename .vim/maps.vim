@@ -39,3 +39,6 @@ nnoremap <leader>kp :let @*=expand("%")<CR>
 " tabs navigation
 map <Leader>h :tabprevious<cr>
 map <Leader>l :tabnext<cr>
+
+" buffers
+map <Leader>ob :Buffers<cr>
