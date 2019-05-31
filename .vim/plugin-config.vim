@@ -61,3 +61,5 @@ command! -bang -nargs=? -complete=dir GFiles
 
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+
+nmap s <Plug>(easymotion-s2)
