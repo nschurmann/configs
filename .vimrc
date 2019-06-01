@@ -8,11 +8,12 @@ set ruler
 set cursorline
 set encoding=utf-8
 set showmatch
-
+set sw=2
 set relativenumber
 so ~/.vim/plugins.vim
 so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
+
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
 let g:deoplete#enable_at_startup = 1
