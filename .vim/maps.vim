@@ -46,3 +46,7 @@ map <Leader>ob :Buffers<cr>
 " faster scrolling
 nnoremap <silent> <C-e> 5<C-e>
 nnoremap <silent> <C-y> 5<C-y>
+
+nnoremap <Leader>G :G<cr>
+nnoremap <Leader>gp :Gpush<cr>
+nnoremap <Leader>gl :Gpull<cr>
