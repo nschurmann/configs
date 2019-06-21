@@ -44,5 +44,7 @@ map <Leader>l :tabnext<cr>
 map <Leader>ob :Buffers<cr>
 
 " faster scrolling
-nnoremap <silent> <C-e> 5<C-e>
-nnoremap <silent> <C-y> 5<C-y>
+nnoremap <silent> <C-e> 10<C-e>
+nnoremap <silent> <C-y> 10<C-y>
+nmap <Leader>s <Plug>(easymotion-s2)
+
