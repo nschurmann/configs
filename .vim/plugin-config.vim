@@ -35,6 +35,12 @@ let NERDTreeShowLineNumbers=1
 
 let g:javascript_plugin_flow = 1
 
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsSnippetDirectories=[$HOME.'/config/.vim/UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " CoC
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :

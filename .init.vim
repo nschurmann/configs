@@ -12,6 +12,14 @@ set ruler
 set cursorline
 set encoding=utf-8
 set showmatch
+set signcolumn=yes
+set expandtab
+set tabstop=2 shiftwidth=2
+
+filetype plugin indent on
+
+set list
+set listchars=·,tab:▸\ ,trail:▫,extends:>,precedes:<,nbsp:+,eol:¬
 
 set relativenumber
 so ~/.vim/plugins.vim
