@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'ianks/vim-tsx'
+Plug 'mxw/vim-jsx'
 Plug 'flowtype/vim-flow'
 
 " status bar
@@ -27,12 +28,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " autocomplete
 Plug 'sirver/ultisnips'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'neoclide/coc-tsserver', { 'do': { -> 'yarn install --frozen-lockfile' } }
-Plug 'neoclide/coc-prettier', { 'do': { -> 'yarn install --frozen-lockfile' } }
-Plug 'neoclide/coc-json', { 'do': { -> 'yarn install --frozen-lockfile' } }
-Plug 'neoclide/coc-tslint-plugin', { 'do': { -> 'yarn install --frozen-lockfile' } }
-Plug 'neoclide/coc-eslint', { 'do': { -> 'yarn install --frozen-lockfile' } }
 
 " test
 Plug 'tyewang/vimux-jest-test'
