@@ -27,7 +27,6 @@ so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
-let g:deoplete#enable_at_startup = 1
 let g:jsx_ext_required = 0
 highlight Normal ctermbg=NONE
 set laststatus=2
