@@ -73,6 +73,9 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
+" fugitive always vertical diffing
+set diffopt+=vertical
+
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
