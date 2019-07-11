@@ -111,7 +111,7 @@
                     {
                         "description": "backspace or delete remap",
                         "manipulators": [
-			    {
+                            {
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
@@ -455,7 +455,7 @@
                     {
                         "description": "SpaceFN: Space to numbers",
                         "manipulators": [
-                              {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -501,7 +501,7 @@
                                 ],
                                 "type": "basic"
                             },
-			    {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -524,7 +524,7 @@
                                 ],
                                 "type": "basic"
                             },
-			    {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -547,7 +547,7 @@
                                 ],
                                 "type": "basic"
                             },
-			    {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -570,7 +570,7 @@
                                 ],
                                 "type": "basic"
                             },
-			    {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -593,7 +593,7 @@
                                 ],
                                 "type": "basic"
                             },
-			    {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -616,7 +616,7 @@
                                 ],
                                 "type": "basic"
                             },
-			    {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -639,7 +639,7 @@
                                 ],
                                 "type": "basic"
                             },
-			    {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -662,7 +662,7 @@
                                 ],
                                 "type": "basic"
                             },
-			    {
+                            {
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -689,7 +689,54 @@
                     }
                 ]
             },
-            "devices": [],
+            "devices": [
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 0,
+                        "vendor_id": 13
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "right_option"
+                            },
+                            "to": {
+                                "key_code": "right_command"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_command"
+                            },
+                            "to": {
+                                "key_code": "right_option"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_option"
+                            },
+                            "to": {
+                                "key_code": "left_command"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_command"
+                            },
+                            "to": {
+                                "key_code": "left_option"
+                            }
+                        }
+                    ]
+                }
+            ],
             "fn_function_keys": [
                 {
                     "from": {
@@ -793,40 +840,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": false,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "left_command"
-                    },
-                    "to": {
-                        "key_code": "left_option"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "left_option"
-                    },
-                    "to": {
-                        "key_code": "left_command"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "right_command"
-                    },
-                    "to": {
-                        "key_code": "right_option"
-                    }
-                },
-                {
-                    "from": {
-                        "key_code": "right_option"
-                    },
-                    "to": {
-                        "key_code": "right_command"
-                    }
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "mouse_key_xy_scale": 100
