@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/nicolasschurmann/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,3 +119,4 @@ function openNvim {
 
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
+export GIT_EDITOR=vim
