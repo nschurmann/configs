@@ -206,7 +206,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "tab",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -416,11 +416,11 @@
                         }
                     },
                     {
-                        "description": "SpaceFN: Space enables SpaceFN mode (see: https://geekhack.org/index.php?topic=51069.0)",
+                        "description": "TabFN: Tab enables TabFN mode (see: https://geekhack.org/index.php?topic=51069.0)",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "tab",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -430,7 +430,7 @@
                                 "to": [
                                     {
                                         "set_variable": {
-                                            "name": "spacefn_mode",
+                                            "name": "tabfn_mode",
                                             "value": 1
                                         }
                                     }
@@ -438,14 +438,14 @@
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
-                                            "name": "spacefn_mode",
+                                            "name": "tabfn_mode",
                                             "value": 0
                                         }
                                     }
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "spacebar"
+                                        "key_code": "tab"
                                     }
                                 ],
                                 "type": "basic"
@@ -453,12 +453,12 @@
                         ]
                     },
                     {
-                        "description": "SpaceFN: Space to numbers",
+                        "description": "TabFN: Tab to numbers",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -481,7 +481,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -504,7 +504,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -527,7 +527,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -550,7 +550,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -573,7 +573,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -596,7 +596,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -619,7 +619,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -642,7 +642,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -665,7 +665,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "spacefn_mode",
+                                        "name": "tabfn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -755,6 +755,36 @@
                             "to": {
                                 "key_code": "right_command"
                             }
+                        }
+                    ]
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 60,
+                        "vendor_id": 9494
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "left_command"
+                            },
+                            "to": {
+                                "key_code": "left_option"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_option"
+                            },
+                            "to": {
+                                "key_code": "left_command"
+                            }
                         },
                         {
                             "from": {
@@ -766,6 +796,28 @@
                         },
                         {
                             "from": {
+                                "key_code": "right_option"
+                            },
+                            "to": {
+                                "key_code": "right_command"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 41618,
+                        "vendor_id": 1241
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": {
                                 "key_code": "left_option"
                             },
                             "to": {
@@ -778,6 +830,22 @@
                             },
                             "to": {
                                 "key_code": "left_option"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_option"
+                            },
+                            "to": {
+                                "key_code": "right_command"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_command"
+                            },
+                            "to": {
+                                "key_code": "right_option"
                             }
                         }
                     ]
