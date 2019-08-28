@@ -51,3 +51,5 @@ nmap <Leader>s <Plug>(easymotion-s2)
 nnoremap <Leader>G :G<cr>
 nnoremap <Leader>gp :Gpush<cr>
 nnoremap <Leader>gl :Gpull<cr>
+
+nnoremap <Leader>x :!node %<cr>
