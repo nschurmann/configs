@@ -25,6 +25,7 @@ set relativenumber
 so ~/.vim/plugins.vim
 so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
+
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
 let g:jsx_ext_required = 0
