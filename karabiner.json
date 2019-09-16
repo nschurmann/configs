@@ -234,7 +234,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -256,7 +256,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "h",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -278,7 +278,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -818,14 +818,6 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "left_command"
-                            },
-                            "to": {
-                                "key_code": "left_option"
-                            }
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_option"
                             },
                             "to": {
@@ -834,10 +826,10 @@
                         },
                         {
                             "from": {
-                                "key_code": "right_command"
+                                "key_code": "left_command"
                             },
                             "to": {
-                                "key_code": "right_option"
+                                "key_code": "left_option"
                             }
                         },
                         {
@@ -846,6 +838,14 @@
                             },
                             "to": {
                                 "key_code": "right_command"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_command"
+                            },
+                            "to": {
+                                "key_code": "right_option"
                             }
                         }
                     ]
