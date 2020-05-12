@@ -920,7 +920,7 @@
                         "key_code": "f5"
                     },
                     "to": {
-                        "key_code": "illumination_decrement"
+                        "key_code": "volume_decrement"
                     }
                 },
                 {
@@ -928,7 +928,7 @@
                         "key_code": "f6"
                     },
                     "to": {
-                        "key_code": "illumination_increment"
+                        "key_code": "volume_increment"
                     }
                 },
                 {
@@ -968,7 +968,7 @@
                         "key_code": "f11"
                     },
                     "to": {
-                        "consumer_key_code": "volume_decrement"
+                        "consumer_key_code": "illumination_decrement"
                     }
                 },
                 {
@@ -976,7 +976,7 @@
                         "key_code": "f12"
                     },
                     "to": {
-                        "consumer_key_code": "volume_increment"
+                        "consumer_key_code": "illumination_increment"
                     }
                 }
             ],
