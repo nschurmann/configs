@@ -28,7 +28,6 @@ so ~/.vim/maps.vim
 
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
-let g:jsx_ext_required = 0
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
