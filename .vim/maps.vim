@@ -14,7 +14,6 @@ nnoremap <Leader>; $a;<Esc>
 
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
-
 " shorter commands
 cnoreabbrev tree NERDTreeToggle
 cnoreabbrev blame Gblame
@@ -26,14 +25,16 @@ map <Leader>nt :NERDTreeFind<CR>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
 
-"CoC
+" Use <c-space> to trigger completion.
+"inoremap <silent><expr> <c-space> coc#refresh()
+ 
+" Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " diagnostics
-nnoremap <Leader>dia  :<C-u>CocList diagnostics<cr>
 nnoremap <leader>kp :let @*=expand("%")<CR>
 
 " tabs navigation
@@ -43,16 +44,27 @@ map <Leader>l :tabnext<cr>
 " buffers
 map <Leader>ob :Buffers<cr>
 
+
 " faster scrolling
 nnoremap <silent> <C-e> 10<C-e>
 nnoremap <silent> <C-y> 10<C-y>
 nmap <Leader>s <Plug>(easymotion-s2)
 
+" git
 nnoremap <Leader>G :G<cr>
 nnoremap <Leader>gp :Gpush<cr>
 nnoremap <Leader>gl :Gpull<cr>
 
+" run current file
 nnoremap <Leader>x :!node %<cr>
+
+" Use <c-space> to trigger completion.
+if &filetype == "javascript" || &filetype == "python"
+  inoremap <c-space> <C-x><C-u>
+else
+  inoremap <silent><expr> <c-space> coc#refresh()
+endif
+
 
 set splitright
 function! OpenTerminal()

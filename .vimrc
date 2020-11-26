@@ -2,7 +2,7 @@ set number
 set mouse=a
 set numberwidth=1
 set clipboard=unnamed
-syntax enable
+syntax on
 set showcmd
 set ruler
 set cursorline
@@ -11,21 +11,20 @@ set showmatch
 set sw=2
 set relativenumber
 so ~/.vim/plugins.vim
-so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
+so ~/.vim/plugin-config.vim
 
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = "hard"
-let g:deoplete#enable_at_startup = 1
-let g:jsx_ext_required = 0
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
 
 " Javascript
-autocmd BufRead *.js set filetype=javascript.jsx
-autocmd BufRead *.jsx set filetype=javascript.jsx
-augroup filetype javascript syntax=javascript
+"autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
+"autocmd bufnewfile,bufread *.ts set filetype=typescript.tsx
+"autocmd bufnewfile,bufread *.jsx set filetype=javascript.jsx
+"autocmd bufnewfile,bufread *.js set filetype=javascript.jsx
 
 "" Searching
 set hlsearch                    " highlight matches
