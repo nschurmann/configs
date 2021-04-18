@@ -45,6 +45,9 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 " kite
 let g:kite_supported_languages = ['javascript', 'python']
 
+" tmux navigator
+let g:tmux_navigator_no_mappings = 1
+
 " coc
 autocmd FileType python let b:coc_suggest_disable = 1
 autocmd FileType javascript let b:coc_suggest_disable = 1

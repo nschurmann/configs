@@ -25,6 +25,12 @@ map <Leader>nt :NERDTreeFind<CR>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
 
+" tmux navigator
+nnoremap <silent> <Leader><C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <Leader><C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <Leader><C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <Leader><C-l> :TmuxNavigateRight<cr>
+
 " Use <c-space> to trigger completion.
 "inoremap <silent><expr> <c-space> coc#refresh()
  
@@ -46,8 +52,8 @@ map <Leader>ob :Buffers<cr>
 
 
 " faster scrolling
-nnoremap <silent> <C-e> 10<C-e>
-nnoremap <silent> <C-y> 10<C-y>
+nnoremap <C-j> 10j
+nnoremap <C-k> 10k
 nmap <Leader>s <Plug>(easymotion-s2)
 
 " git
