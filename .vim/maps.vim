@@ -52,8 +52,8 @@ map <Leader>ob :Buffers<cr>
 
 
 " faster scrolling
-nnoremap <C-j> 10j
-nnoremap <C-k> 10k
+nnoremap <C-j> 10<C-e>
+nnoremap <C-k> 10<C-y>
 nmap <Leader>s <Plug>(easymotion-s2)
 
 " git
