@@ -20,11 +20,7 @@ highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
 
-" Javascript
-"autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
-"autocmd bufnewfile,bufread *.ts set filetype=typescript.tsx
-"autocmd bufnewfile,bufread *.jsx set filetype=javascript.jsx
-"autocmd bufnewfile,bufread *.js set filetype=javascript.jsx
+au BufNewFile,BufRead *.html set filetype=htmldjango
 
 "" Searching
 set hlsearch                    " highlight matches
