@@ -2,9 +2,8 @@ call plug#begin('~/.vim/plugged')
 
 " syntax
 Plug 'sheerun/vim-polyglot'
-"Plug 'HerringtonDarkholme/yats.vim'
-"Plug 'yuezk/vim-js'
-"Plug 'flowtype/vim-flow'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'  
 
 " status bar
 Plug 'maximbaz/lightline-ale'

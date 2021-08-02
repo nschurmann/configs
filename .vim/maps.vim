@@ -40,6 +40,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Remap surround to lowercase s so it does not add an empty space
+xmap s <Plug>VSurround
 " diagnostics
 nnoremap <leader>kp :let @*=expand("%")<CR>
 

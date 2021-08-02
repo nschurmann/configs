@@ -11,5 +11,9 @@ snippet block "" bi
 endsnippet
 
 snippet extends "" bi
-{% extends "${1:base.html}" %}
+{% extends '${1:base.html}' %}
+endsnippet
+
+snippet include "" bi
+{% include '${1:something}.html' %}
 endsnippet

@@ -1,3 +1,5 @@
+" polyglot
+let g:polyglot_disabled = ['javascript']
 set number
 set mouse=a
 set numberwidth=1
