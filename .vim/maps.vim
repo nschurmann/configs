@@ -52,6 +52,16 @@ map <Leader>l :tabnext<cr>
 " buffers
 map <Leader>ob :Buffers<cr>
 
+" keeping it centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Moving text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <Leader>k :m .-2<CR>==
+nnoremap <Leader>j :m .+1<CR>==
 
 " faster scrolling
 nnoremap <C-j> 10<C-e>
