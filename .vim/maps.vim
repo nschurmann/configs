@@ -14,6 +14,7 @@ nnoremap <Leader>; $a;<Esc>
 
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q!<CR>
 " shorter commands
 cnoreabbrev tree NERDTreeToggle
 cnoreabbrev blame Gblame
@@ -31,9 +32,6 @@ nnoremap <silent> <Leader><C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <Leader><C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <Leader><C-l> :TmuxNavigateRight<cr>
 
-" Use <c-space> to trigger completion.
-"inoremap <silent><expr> <c-space> coc#refresh()
- 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -43,7 +41,7 @@ nmap <silent> gr <Plug>(coc-references)
 " Remap surround to lowercase s so it does not add an empty space
 xmap s <Plug>VSurround
 " diagnostics
-nnoremap <leader>kp :let @*=expand("%")<CR>
+nnoremap <leader>P :let @*=expand("%")<CR>
 
 " tabs navigation
 map <Leader>h :tabprevious<cr>
@@ -78,9 +76,9 @@ nnoremap <Leader>x :!node %<cr>
 
 " Use <c-space> to trigger completion.
 "if &filetype == "javascript" || &filetype == "python"
-  inoremap <c-space> <C-x><C-u>
+  "inoremap <c-space> <C-x><C-u>
 "else
-  "inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent><expr> <c-space> coc#refresh()
 "endif
 
 
@@ -119,3 +117,21 @@ function! OpenTerminal()
   endif
 endfunction
 nnoremap <C-t> :call OpenTerminal()<CR>
+
+inoremap <expr> <CR> ParensIndent()
+
+function! ParensIndent()
+  let prev = col('.') - 1
+  let after = col('.')
+  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  if (prevChar == '"' && afterChar == '"') ||
+\    (prevChar == "'" && afterChar == "'") ||
+\    (prevChar == "(" && afterChar == ")") ||
+\    (prevChar == "{" && afterChar == "}") ||
+\    (prevChar == "[" && afterChar == "]")
+    return "\<CR>\<ESC>O"
+  endif
+  
+  return "\<CR>"
+endfunction

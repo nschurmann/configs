@@ -17,7 +17,6 @@ Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'scrooloose/nerdtree'
 
 " typing
-Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 
