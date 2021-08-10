@@ -208,14 +208,28 @@ inoremap <expr> ' CheckNextQuote(quote)
 let dquote = '"'
 inoremap <expr> " CheckNextQuote(dquote)
 
+let bticks = '`'
+inoremap <expr> ` CheckNextQuote(bticks)
+
 function CheckNextQuote(c)
   let after = col('.')
   let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  
   if (afterChar == a:c)
-
     return "\<right>"
   endif
-  return a:c . a:c . "\<left>"
+  if (afterChar == ' ' || afterChar == '')
+    return a:c . a:c . "\<left>"
+  endif
+  if (afterChar != a:c)
+    let bticks = '`'
+    let dquote = '"'
+    let quote = "'"
+    if(afterChar == dquote || afterChar == quote || afterChar == bticks)
+      return a:c . a:c . "\<left>"
+    endif
+  endif
+  return a:c
 endfunction
 
 function CheckNextParens(c)
