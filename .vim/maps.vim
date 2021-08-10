@@ -135,3 +135,95 @@ function! ParensIndent()
   
   return "\<CR>"
 endfunction
+
+inoremap <expr> <space> ParensSpacing()
+
+function! ParensSpacing()
+  let prev = col('.') - 1
+  let after = col('.')
+  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  if (prevChar == '"' && afterChar == '"') ||
+\    (prevChar == "'" && afterChar == "'") ||
+\    (prevChar == "(" && afterChar == ")") ||
+\    (prevChar == "{" && afterChar == "}") ||
+\    (prevChar == "[" && afterChar == "]")
+    return "\<space>\<space>\<left>"
+  endif
+  
+  return "\<space>"
+endfunction
+
+inoremap <expr> <BS> ParensRemoveSpacing()
+
+function! ParensRemoveSpacing()
+  let prev = col('.') - 1
+  let after = col('.')
+  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+
+  if (prevChar == '"' && afterChar == '"') ||
+\    (prevChar == "'" && afterChar == "'") ||
+\    (prevChar == "(" && afterChar == ")") ||
+\    (prevChar == "{" && afterChar == "}") ||
+\    (prevChar == "[" && afterChar == "]")
+    return "\<bs>\<right>\<bs>"
+  endif
+  
+  if (prevChar == ' ' && afterChar == ' ')
+    let prev = col('.') - 2
+    let after = col('.') + 1
+    let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
+    let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+    if (prevChar == '"' && afterChar == '"') ||
+  \    (prevChar == "'" && afterChar == "'") ||
+  \    (prevChar == "(" && afterChar == ")") ||
+  \    (prevChar == "{" && afterChar == "}") ||
+  \    (prevChar == "[" && afterChar == "]")
+      return "\<bs>\<right>\<bs>"
+    endif
+  endif
+  
+  return "\<bs>"
+endfunction
+
+inoremap { {}<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap ' ''<left>
+inoremap " ""<left>
+
+let curly = "}"
+inoremap <expr> } CheckNextParens(curly)
+
+let bracket = "]"
+inoremap <expr> ] CheckNextParens(bracket)
+
+let parens = ")"
+inoremap <expr> ) CheckNextParens(parens)
+
+let quote = "'"
+inoremap <expr> ' CheckNextQuote(quote)
+
+let dquote = '"'
+inoremap <expr> " CheckNextQuote(dquote)
+
+function CheckNextQuote(c)
+  let after = col('.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  if (afterChar == a:c)
+
+    return "\<right>"
+  endif
+  return a:c . a:c . "\<left>"
+endfunction
+
+function CheckNextParens(c)
+  let after = col('.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  if (afterChar == a:c)
+
+    return "\<right>"
+  endif
+  return a:c
+endfunction
