@@ -10,6 +10,7 @@ set ruler
 set cursorline
 set encoding=utf-8
 set showmatch
+set termguicolors
 set sw=2
 set relativenumber
 so ~/.vim/plugins.vim
@@ -23,6 +24,7 @@ set laststatus=2
 set noshowmode
 
 au BufNewFile,BufRead *.html set filetype=htmldjango
+lua require'colorizer'.setup()
 
 "" Searching
 set hlsearch                    " highlight matches

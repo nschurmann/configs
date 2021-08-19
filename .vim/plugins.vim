@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'  
+Plug 'norcalli/nvim-colorizer.lua'
 
 " status bar
 Plug 'maximbaz/lightline-ale'

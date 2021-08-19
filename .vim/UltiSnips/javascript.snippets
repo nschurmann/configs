@@ -57,11 +57,14 @@ const { $1 } = $2
 endsnippet
 
 snippet rfc "React function component" b
-const $1 = ${2:($3)} => (
-  <$4>
-    $5
-  </$4>
-)
+const $1 = ${2:($3)} => {
+  return (
+    <$4>
+      $5
+    </$4>
+  )
+}
+
 export default $1
 endsnippet
 
@@ -69,11 +72,14 @@ snippet rnfc "React native function component" b
 import React from 'react'
 import { ${4} } from 'react-native'
 
-const $1 = ${2:($3)} => (
-  <$4>
-    $5
-  </$4>
-)
+const $1 = ${2:($3)} => {
+  return (
+    <$4>
+      $5
+    </$4>
+  )
+}
+
 export default $1
 endsnippet
 

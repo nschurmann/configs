@@ -218,7 +218,7 @@ function CheckNextQuote(c)
   if (afterChar == a:c)
     return "\<right>"
   endif
-  if (afterChar == ' ' || afterChar == '')
+  if (afterChar == ' ' || afterChar == '' || afterChar == ')' || afterChar== '}' || afterChar == ']')
     return a:c . a:c . "\<left>"
   endif
   if (afterChar != a:c)
