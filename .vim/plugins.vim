@@ -2,8 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " syntax
 Plug 'sheerun/vim-polyglot'
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'  
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " status bar
 Plug 'maximbaz/lightline-ale'
