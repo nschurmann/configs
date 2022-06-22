@@ -13,22 +13,26 @@ https://github.com/junegunn/vim-plug#vim
 sudo apt-get install fzf
 
 ## Instalar node 14
-cd ~
-curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+> cd ~
+> curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
 
-nano nodesource_setup.sh
-sudo bash nodesource_setup.sh
-sudo apt install nodejs
-node -v
+> nano nodesource_setup.sh
+> sudo bash nodesource_setup.sh
+> sudo apt install nodejs
+> node -v
 
 ## Instalar zsh
-sudo apt-get install zsh
+> sudo apt-get install zsh
 
 ## init.vim
 
 Configuración para neovim 
-.config/nvim/init.vim
+> .config/nvim/init.vim
 
-`set runtimepath^=~/.vim runtimepath^=~/.vim/after
+`
+set runtimepath^=~/.vim runtimepath^=~/.vim/after
 let &packpath=&runtimepath
-source ~/.vimrc`
+source ~/.vimrc
+`
+### Git windows/linux
+git config --global core.autocrlf true
