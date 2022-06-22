@@ -29,6 +29,6 @@ sudo apt-get install zsh
 Configuración para neovim 
 .config/nvim/init.vim
 
-set runtimepath^=~/.vim runtimepath^=~/.vim/after
+`set runtimepath^=~/.vim runtimepath^=~/.vim/after
 let &packpath=&runtimepath
-source ~/.vimrc
+source ~/.vimrc`
