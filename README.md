@@ -12,6 +12,9 @@ https://github.com/junegunn/vim-plug#vim
 ## Instalar fzf
 sudo apt-get install fzf
 
+## Instalar Ag
+sudo apt-get install -y silversearcher-ag
+
 ## Instalar node 14
 > cd ~
 > curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
