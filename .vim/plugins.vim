@@ -46,6 +46,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+Plug 'github/copilot.vim'
 
 " git
 Plug 'tpope/vim-fugitive'
