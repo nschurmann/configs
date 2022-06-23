@@ -105,7 +105,7 @@ function! OpenTerminal()
     execute "q"
   else
     " open terminal
-    execute "vsp term://zsh"
+    execute "vsp term://cmd"
 
     " turn off numbers
     execute "set nonu"
