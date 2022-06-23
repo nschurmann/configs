@@ -10,6 +10,7 @@ Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
 " Themes
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 
@@ -17,6 +18,7 @@ Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'scrooloose/nerdtree'
 
 " typing
+Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 
@@ -41,6 +43,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 
 " git
 Plug 'tpope/vim-fugitive'

@@ -1,5 +1,11 @@
 let mapleader=" "
 
+" back normal mode 
+:imap ii <Esc>
+
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
+
 " testing
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
@@ -23,6 +29,7 @@ cnoreabbrev diff Gdiff
 
 " plugs
 map <Leader>nt :NERDTreeFind<CR>
+map <Leader>nq :NERDTreeClose<CR>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
 
@@ -67,12 +74,12 @@ nnoremap <C-k> 10<C-y>
 nmap <Leader>s <Plug>(easymotion-s2)
 
 " git
-nnoremap <Leader>G :G<cr>
-nnoremap <Leader>gp :Gpush<cr>
-nnoremap <Leader>gl :Gpull<cr>
+nnoremap <Leader>G :Git<cr>
+nnoremap <Leader>gp :Git push<cr>
+nnoremap <Leader>gl :Git pull<cr>
 
 " run current file
-nnoremap <Leader>x :!node %<cr>
+"nnoremap <Leader>x :!node %<cr>
 
 " Use <c-space> to trigger completion.
 "if &filetype == "javascript" || &filetype == "python"
